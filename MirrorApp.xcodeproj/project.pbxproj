@@ -14,6 +14,8 @@
 		001F957B1A3B4AF700984D3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001F957A1A3B4AF700984D3C /* Images.xcassets */; };
 		001F957E1A3B4AF700984D3C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001F957C1A3B4AF700984D3C /* LaunchScreen.xib */; };
 		001F958A1A3B4AF700984D3C /* MirrorAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 001F95891A3B4AF700984D3C /* MirrorAppTests.m */; };
+		001F95981A3B537E00984D3C /* CameraOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 001F95971A3B537E00984D3C /* CameraOverlay.m */; };
+		001F959A1A3B53AE00984D3C /* CameraOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001F95991A3B53AE00984D3C /* CameraOverlay.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		001F95831A3B4AF700984D3C /* MirrorAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MirrorAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		001F95881A3B4AF700984D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		001F95891A3B4AF700984D3C /* MirrorAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MirrorAppTests.m; sourceTree = "<group>"; };
+		001F95961A3B537E00984D3C /* CameraOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraOverlay.h; sourceTree = "<group>"; };
+		001F95971A3B537E00984D3C /* CameraOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraOverlay.m; sourceTree = "<group>"; };
+		001F95991A3B53AE00984D3C /* CameraOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraOverlay.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +86,9 @@
 		001F956C1A3B4AF700984D3C /* MirrorApp */ = {
 			isa = PBXGroup;
 			children = (
-				001F95711A3B4AF700984D3C /* AppDelegate.h */,
-				001F95721A3B4AF700984D3C /* AppDelegate.m */,
-				001F95741A3B4AF700984D3C /* ViewController.h */,
-				001F95751A3B4AF700984D3C /* ViewController.m */,
+				001F95951A3B534D00984D3C /* Views */,
+				001F95941A3B533F00984D3C /* AppDelegate */,
+				001F95931A3B532800984D3C /* Controllers */,
 				001F95771A3B4AF700984D3C /* Main.storyboard */,
 				001F957A1A3B4AF700984D3C /* Images.xcassets */,
 				001F957C1A3B4AF700984D3C /* LaunchScreen.xib */,
@@ -117,6 +121,34 @@
 				001F95881A3B4AF700984D3C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		001F95931A3B532800984D3C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				001F95741A3B4AF700984D3C /* ViewController.h */,
+				001F95751A3B4AF700984D3C /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		001F95941A3B533F00984D3C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				001F95711A3B4AF700984D3C /* AppDelegate.h */,
+				001F95721A3B4AF700984D3C /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		001F95951A3B534D00984D3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				001F95961A3B537E00984D3C /* CameraOverlay.h */,
+				001F95971A3B537E00984D3C /* CameraOverlay.m */,
+				001F95991A3B53AE00984D3C /* CameraOverlay.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				001F95791A3B4AF700984D3C /* Main.storyboard in Resources */,
+				001F959A1A3B53AE00984D3C /* CameraOverlay.xib in Resources */,
 				001F957E1A3B4AF700984D3C /* LaunchScreen.xib in Resources */,
 				001F957B1A3B4AF700984D3C /* Images.xcassets in Resources */,
 			);
@@ -220,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				001F95761A3B4AF700984D3C /* ViewController.m in Sources */,
+				001F95981A3B537E00984D3C /* CameraOverlay.m in Sources */,
 				001F95731A3B4AF700984D3C /* AppDelegate.m in Sources */,
 				001F95701A3B4AF700984D3C /* main.m in Sources */,
 			);
