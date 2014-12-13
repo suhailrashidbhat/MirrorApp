@@ -16,6 +16,10 @@
 		001F958A1A3B4AF700984D3C /* MirrorAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 001F95891A3B4AF700984D3C /* MirrorAppTests.m */; };
 		001F95981A3B537E00984D3C /* CameraOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 001F95971A3B537E00984D3C /* CameraOverlay.m */; };
 		001F959A1A3B53AE00984D3C /* CameraOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 001F95991A3B53AE00984D3C /* CameraOverlay.xib */; };
+		00A207211A3CA85500AFF73C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A207201A3CA85500AFF73C /* SecondViewController.m */; };
+		00A207231A3CB06F00AFF73C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A207221A3CB06F00AFF73C /* ImageIO.framework */; };
+		00A207271A3CBC6A00AFF73C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A207261A3CBC6A00AFF73C /* AudioToolbox.framework */; };
+		00A2072A1A3CC4C800AFF73C /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 00A207291A3CC4C800AFF73C /* cancel.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,11 @@
 		001F95961A3B537E00984D3C /* CameraOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraOverlay.h; sourceTree = "<group>"; };
 		001F95971A3B537E00984D3C /* CameraOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraOverlay.m; sourceTree = "<group>"; };
 		001F95991A3B53AE00984D3C /* CameraOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraOverlay.xib; sourceTree = "<group>"; };
+		00A2071F1A3CA85500AFF73C /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		00A207201A3CA85500AFF73C /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		00A207221A3CB06F00AFF73C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		00A207261A3CBC6A00AFF73C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		00A207291A3CC4C800AFF73C /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cancel.png; path = ../../../../Downloads/cancel.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00A207271A3CBC6A00AFF73C /* AudioToolbox.framework in Frameworks */,
+				00A207231A3CB06F00AFF73C /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +81,7 @@
 			children = (
 				001F956C1A3B4AF700984D3C /* MirrorApp */,
 				001F95861A3B4AF700984D3C /* MirrorAppTests */,
+				00A207251A3CBC5000AFF73C /* Frameworks */,
 				001F956B1A3B4AF700984D3C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,13 +98,13 @@
 		001F956C1A3B4AF700984D3C /* MirrorApp */ = {
 			isa = PBXGroup;
 			children = (
+				00A207241A3CBC3100AFF73C /* UI */,
 				001F95951A3B534D00984D3C /* Views */,
 				001F95941A3B533F00984D3C /* AppDelegate */,
 				001F95931A3B532800984D3C /* Controllers */,
-				001F95771A3B4AF700984D3C /* Main.storyboard */,
-				001F957A1A3B4AF700984D3C /* Images.xcassets */,
-				001F957C1A3B4AF700984D3C /* LaunchScreen.xib */,
+				00A207281A3CC4AC00AFF73C /* Resources */,
 				001F956D1A3B4AF700984D3C /* Supporting Files */,
+				001F957A1A3B4AF700984D3C /* Images.xcassets */,
 			);
 			path = MirrorApp;
 			sourceTree = "<group>";
@@ -128,6 +140,8 @@
 			children = (
 				001F95741A3B4AF700984D3C /* ViewController.h */,
 				001F95751A3B4AF700984D3C /* ViewController.m */,
+				00A2071F1A3CA85500AFF73C /* SecondViewController.h */,
+				00A207201A3CA85500AFF73C /* SecondViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -149,6 +163,32 @@
 				001F95991A3B53AE00984D3C /* CameraOverlay.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		00A207241A3CBC3100AFF73C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				001F95771A3B4AF700984D3C /* Main.storyboard */,
+				001F957C1A3B4AF700984D3C /* LaunchScreen.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		00A207251A3CBC5000AFF73C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00A207261A3CBC6A00AFF73C /* AudioToolbox.framework */,
+				00A207221A3CB06F00AFF73C /* ImageIO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		00A207281A3CC4AC00AFF73C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				00A207291A3CC4C800AFF73C /* cancel.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +274,7 @@
 				001F95791A3B4AF700984D3C /* Main.storyboard in Resources */,
 				001F959A1A3B53AE00984D3C /* CameraOverlay.xib in Resources */,
 				001F957E1A3B4AF700984D3C /* LaunchScreen.xib in Resources */,
+				00A2072A1A3CC4C800AFF73C /* cancel.png in Resources */,
 				001F957B1A3B4AF700984D3C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00A207211A3CA85500AFF73C /* SecondViewController.m in Sources */,
 				001F95761A3B4AF700984D3C /* ViewController.m in Sources */,
 				001F95981A3B537E00984D3C /* CameraOverlay.m in Sources */,
 				001F95731A3B4AF700984D3C /* AppDelegate.m in Sources */,
@@ -448,6 +490,7 @@
 				001F958F1A3B4AF700984D3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		001F95901A3B4AF700984D3C /* Build configuration list for PBXNativeTarget "MirrorAppTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +499,7 @@
 				001F95921A3B4AF700984D3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

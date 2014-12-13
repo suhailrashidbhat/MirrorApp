@@ -20,7 +20,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="609" y="156"/>
+            <point key="canvasLocation" x="1094" y="174"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="lix-JB-GJ1">
+            <objects>
+                <viewController id="fz6-JL-gAK" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fgo-Df-zoN"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Cb-rk-jEQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="llb-wI-LLp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSr-lu-5k6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DhS-qs-bBK">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mra-ch-vtK">
+                                <rect key="frame" x="5" y="20" width="590" height="580"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="captureNow:" destination="fz6-JL-gAK" eventType="touchUpInside" id="CaW-39-U88"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="container" destination="XSr-lu-5k6" id="Ec1-LT-bgd"/>
+                        <outlet property="imageDisplayView" destination="DhS-qs-bBK" id="ThO-jR-4pA"/>
+                        <outlet property="takePictureButton" destination="Mra-ch-vtK" id="KOa-Mw-d8K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nzS-OR-xHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1727" y="174"/>
         </scene>
     </scenes>
 </document>
