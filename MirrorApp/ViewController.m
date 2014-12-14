@@ -96,6 +96,10 @@
     self.imagePicker.cameraOverlayView = self.cameraOverlay;
     self.imagePicker.showsCameraControls = NO;
     self.imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+
+    // This image picker should not cause shutter sound while capturing picture if we hack it Apple may reject it while reviewing for AppStore.
+    // TODO:: NO SHUTTER SOUND!
+
     [self presentViewController:self.imagePicker animated:NO completion:NULL];
 }
 
@@ -108,8 +112,10 @@
     return YES;
 }
 
+
 /* Capture the image and and put it on Image View.
  Unhide the Image view. Animate the tool bar to visible. */
+
 -(void)clicktapped:(id)sender {
     //[self screenshotWindow]; -- Not Working!
     //[self captureStillImage];
@@ -270,7 +276,6 @@
              self.screenShot = screenshot;
 
              // We're done with the image context, so close it out.
-             //
              UIGraphicsEndImageContext();
          }
          else if (error)
