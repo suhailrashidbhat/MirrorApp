@@ -14,6 +14,7 @@
 #import "ViewController.h"
 #import "CameraOverlay.h"
 #import <AVFoundation/AVFoundation.h>
+#import "SettingsViewController.h"
 
 @interface ViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate> {
     AVCaptureMovieFileOutput *mMovieFileOutput;
@@ -107,9 +108,9 @@
     return YES;
 }
 
+/* Capture the image and and put it on Image View.
+ Unhide the Image view. Animate the tool bar to visible. */
 -(void)clicktapped:(id)sender {
-    // Capture the image and and put it on Image View.
-    // Unhide the Image view. Animate the tool bar to visible.
     //[self screenshotWindow]; -- Not Working!
     //[self captureStillImage];
     //[self.capturedSession stopRunning];
@@ -147,6 +148,8 @@
 
 -(void)settingsView:(id)sender {
     // Present Settings view.
+    SettingsViewController *settingsViewController = (SettingsViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"settings"];
+    [self.imagePicker presentViewController:settingsViewController animated:YES completion:nil];
 }
 
 -(void)cancelImageButtonTapped:(id)sender {
@@ -165,6 +168,7 @@
     UIImage *temp = [UIImage imageWithCGImage:image.CGImage scale:image.scale orientation:UIImageOrientationRight];
     return [UIImage imageWithCGImage:temp.CGImage scale:temp.scale orientation:UIImageOrientationRightMirrored];
 }
+
 #pragma mark UIImagePickerDelegate Methods
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -174,6 +178,17 @@
     self.screenShot = flippedImage;
     [self.imageDisplayView setHidden:NO];
 }
+
+
+/*   BELOW CODE IS NOT USED!
+ 
+ 
+ It is only experimation code to use screenshot taking approach for solving the problem.
+ For trying that separately. I have created SecondViewController which uses AVFoundation to take picture. 
+ At present the launch screen is set to this view controller so that view controller will never be used unless explicitly changed to launch view controller by developer.
+ 
+ */
+
 
 // Better Idea.  -- Doesn't work on Camera Image !
 -(void)takeScreenShot {
@@ -233,7 +248,8 @@
 
     if ([videoConnection isVideoOrientationSupported])
     {
-        [videoConnection setVideoOrientation:[[UIDevice currentDevice] orientation]];
+        [videoConnection setVideoOrientation:AVCaptureVideoOrientationPortrait];
+
     }
 
     [self.capturedStillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error)  {

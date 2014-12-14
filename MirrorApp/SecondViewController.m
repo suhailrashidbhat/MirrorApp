@@ -34,7 +34,6 @@
 
 -(void) viewDidAppear:(BOOL)animated
 {
-    [self.container setFrame:[[UIScreen mainScreen] bounds]];
     UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
     [cancelButton addTarget:self action:@selector(cancelImageDisplay:) forControlEvents:UIControlEventTouchUpInside];
     cancelButton.frame = CGRectMake(self.container.frame.size.width - 40, self.container.frame.size.height - 80, 40, 40);
@@ -44,12 +43,11 @@
 
     CALayer *viewLayer = self.container.layer;
     NSLog(@"viewLayer = %@", viewLayer);
-
+    self.container.layer.bounds = [[UIScreen mainScreen] bounds];
     AVCaptureVideoPreviewLayer *captureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
 
-    captureVideoPreviewLayer.frame = self.container.bounds;
+    captureVideoPreviewLayer.frame = [[UIScreen mainScreen] bounds];
     [self.container.layer addSublayer:captureVideoPreviewLayer];
-
     AVCaptureDevice *device = [self getFrontCamera];
 
     NSError *error = nil;

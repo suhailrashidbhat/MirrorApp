@@ -20,6 +20,7 @@
 		00A207231A3CB06F00AFF73C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A207221A3CB06F00AFF73C /* ImageIO.framework */; };
 		00A207271A3CBC6A00AFF73C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A207261A3CBC6A00AFF73C /* AudioToolbox.framework */; };
 		00A2072A1A3CC4C800AFF73C /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 00A207291A3CC4C800AFF73C /* cancel.png */; };
+		00A2072D1A3CCF5E00AFF73C /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A2072C1A3CCF5E00AFF73C /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		00A207221A3CB06F00AFF73C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		00A207261A3CBC6A00AFF73C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		00A207291A3CC4C800AFF73C /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cancel.png; path = ../../../../Downloads/cancel.png; sourceTree = "<group>"; };
+		00A2072B1A3CCF5E00AFF73C /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		00A2072C1A3CCF5E00AFF73C /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				001F95751A3B4AF700984D3C /* ViewController.m */,
 				00A2071F1A3CA85500AFF73C /* SecondViewController.h */,
 				00A207201A3CA85500AFF73C /* SecondViewController.m */,
+				00A2072B1A3CCF5E00AFF73C /* SettingsViewController.h */,
+				00A2072C1A3CCF5E00AFF73C /* SettingsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 				00A207211A3CA85500AFF73C /* SecondViewController.m in Sources */,
 				001F95761A3B4AF700984D3C /* ViewController.m in Sources */,
 				001F95981A3B537E00984D3C /* CameraOverlay.m in Sources */,
+				00A2072D1A3CCF5E00AFF73C /* SettingsViewController.m in Sources */,
 				001F95731A3B4AF700984D3C /* AppDelegate.m in Sources */,
 				001F95701A3B4AF700984D3C /* main.m in Sources */,
 			);

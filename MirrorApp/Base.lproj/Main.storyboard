@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -34,15 +35,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSr-lu-5k6">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSr-lu-5k6">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DhS-qs-bBK">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DhS-qs-bBK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mra-ch-vtK">
-                                <rect key="frame" x="5" y="20" width="590" height="580"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mra-ch-vtK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -51,7 +52,35 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XSr-lu-5k6" secondAttribute="trailing" id="0kG-Gw-tdT"/>
+                            <constraint firstItem="XSr-lu-5k6" firstAttribute="top" secondItem="fgo-Df-zoN" secondAttribute="bottom" id="13g-jZ-tjO"/>
+                            <constraint firstItem="Mra-ch-vtK" firstAttribute="top" secondItem="fgo-Df-zoN" secondAttribute="bottom" id="3Nq-cc-pCU"/>
+                            <constraint firstAttribute="trailing" secondItem="Mra-ch-vtK" secondAttribute="trailing" id="48g-de-t3t"/>
+                            <constraint firstItem="DhS-qs-bBK" firstAttribute="leading" secondItem="llb-wI-LLp" secondAttribute="leadingMargin" id="5mB-F3-Onr"/>
+                            <constraint firstItem="3Cb-rk-jEQ" firstAttribute="top" secondItem="DhS-qs-bBK" secondAttribute="bottom" id="KF3-g6-QNt"/>
+                            <constraint firstAttribute="centerX" secondItem="Mra-ch-vtK" secondAttribute="centerX" id="L1c-14-u5E"/>
+                            <constraint firstAttribute="centerX" secondItem="XSr-lu-5k6" secondAttribute="centerX" id="Llb-m7-5p2"/>
+                            <constraint firstAttribute="centerY" secondItem="Mra-ch-vtK" secondAttribute="centerY" id="MNd-J5-jcP"/>
+                            <constraint firstItem="Mra-ch-vtK" firstAttribute="leading" secondItem="llb-wI-LLp" secondAttribute="leading" id="Oqy-rQ-oRU"/>
+                            <constraint firstItem="3Cb-rk-jEQ" firstAttribute="top" secondItem="XSr-lu-5k6" secondAttribute="bottom" id="Oxw-cZ-MwA"/>
+                            <constraint firstAttribute="centerY" secondItem="XSr-lu-5k6" secondAttribute="centerY" id="R7c-Ex-UA1"/>
+                            <constraint firstItem="XSr-lu-5k6" firstAttribute="leading" secondItem="llb-wI-LLp" secondAttribute="leading" id="SMR-zH-6nn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DhS-qs-bBK" secondAttribute="trailing" constant="-16" id="XRn-GK-f3S"/>
+                            <constraint firstItem="3Cb-rk-jEQ" firstAttribute="top" secondItem="Mra-ch-vtK" secondAttribute="bottom" id="aSx-8B-kYj"/>
+                            <constraint firstItem="DhS-qs-bBK" firstAttribute="top" secondItem="fgo-Df-zoN" secondAttribute="bottom" id="chj-kv-f8F"/>
+                            <constraint firstAttribute="centerX" secondItem="DhS-qs-bBK" secondAttribute="centerX" id="ibw-Xm-r6H"/>
+                            <constraint firstAttribute="centerY" secondItem="Mra-ch-vtK" secondAttribute="centerY" id="irN-vc-1MD"/>
+                            <constraint firstAttribute="centerY" secondItem="DhS-qs-bBK" secondAttribute="centerY" id="j7v-V7-6gf"/>
+                            <constraint firstAttribute="centerX" secondItem="Mra-ch-vtK" secondAttribute="centerX" id="q5Y-vc-Rh1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5mB-F3-Onr"/>
+                                <exclude reference="chj-kv-f8F"/>
+                            </mask>
+                        </variation>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
@@ -63,6 +92,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzS-OR-xHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1727" y="174"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="bsd-7G-E2l">
+            <objects>
+                <viewController storyboardIdentifier="settings" id="vpx-S2-wWF" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aVD-ar-dec"/>
+                        <viewControllerLayoutGuide type="bottom" id="VQz-ER-IaX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6ej-pf-V6l">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ghq-OS-uBF">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vpx-S2-wWF" id="nFR-Qa-Xfd"/>
+                                    <outlet property="delegate" destination="vpx-S2-wWF" id="l01-yb-4nk"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTr-YS-o99">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Settings" id="OVW-jH-n1E">
+                                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="sUm-Ls-4k0">
+                                            <connections>
+                                                <action selector="doneTapped:" destination="vpx-S2-wWF" id="oKc-Gh-eds"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Ghq-OS-uBF" secondAttribute="centerX" id="4Tn-Ry-hDF"/>
+                            <constraint firstItem="Ghq-OS-uBF" firstAttribute="leading" secondItem="6ej-pf-V6l" secondAttribute="leading" id="Dnl-Qa-geJ"/>
+                            <constraint firstAttribute="centerX" secondItem="UTr-YS-o99" secondAttribute="centerX" id="EKg-uR-7QL"/>
+                            <constraint firstItem="UTr-YS-o99" firstAttribute="leading" secondItem="6ej-pf-V6l" secondAttribute="leading" id="Itd-pg-OqZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Ghq-OS-uBF" secondAttribute="trailing" id="LJg-LH-nXO"/>
+                            <constraint firstItem="UTr-YS-o99" firstAttribute="top" secondItem="6ej-pf-V6l" secondAttribute="top" id="Tfk-SY-fwD"/>
+                            <constraint firstItem="Ghq-OS-uBF" firstAttribute="top" secondItem="UTr-YS-o99" secondAttribute="bottom" id="XEe-Iu-JrW"/>
+                            <constraint firstItem="Ghq-OS-uBF" firstAttribute="top" secondItem="aVD-ar-dec" secondAttribute="bottom" id="bzr-qT-PrR"/>
+                            <constraint firstItem="VQz-ER-IaX" firstAttribute="top" secondItem="Ghq-OS-uBF" secondAttribute="bottom" id="kv9-KA-B42"/>
+                            <constraint firstAttribute="centerY" secondItem="Ghq-OS-uBF" secondAttribute="centerY" id="oTB-Er-uHh"/>
+                            <constraint firstAttribute="trailing" secondItem="UTr-YS-o99" secondAttribute="trailing" id="rcx-SL-2Xp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bzr-qT-PrR"/>
+                                <exclude reference="oTB-Er-uHh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="settingsTable" destination="Ghq-OS-uBF" id="XMh-8a-9nw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zy2-Iu-jMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="297"/>
         </scene>
     </scenes>
 </document>
